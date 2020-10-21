@@ -1,0 +1,16 @@
+body {
+    background-image: url("748112.jpg");
+    background: red;
+}
+
+p {
+    font-weight: bold;
+}
+
+.timer {
+    text-align: right;
+}
+
+.p {
+    background-color: crimson;
+}
