@@ -1,16 +1,20 @@
 body {
-    background-image: url("748112.jpg");
-    background: red;
-}
-
-p {
+    background-image: url("https://source.unsplash.com/yJsuEsVXbsE/5472x3648");
+    background-repeat: no-repeat;
     font-weight: bold;
+    margin: 20% 25% 25% 25%;
+    text-align: center;
+    margin: 0 auto;
 }
 
-.timer {
-    text-align: right;
+#time {
+    padding: 1px;
+    font-size: 70px;
 }
 
-.p {
-    background-color: crimson;
+#greeting {
+    padding: 10 20;
+    font-size: 150px;
 }
+
+#goal {}
