@@ -9,12 +9,14 @@
 </head>
 
 <body>
-    <p id="time"></p>
-    <p id="greeting">Hello, <span id="name" contentEditable="true">name</span></p>
+    <div>
+        <p id="time"></p>
+        <p id="greeting">Hello, <span id="name" contentEditable="true">name</span></p>
+    </div>
     <div>
         <p id="goal">What is your main goal for today?</p>
-        <input type="checkbox" id="task" name="task" ubnchecked>
-        <label for="task" contentEditable="true" id='task'>Enter your task</label>
+        <input type="checkbox" id="task" name="task" unchecked>
+        <label contentEditable="true" id="tasks">Enter your task</label>
     </div>
     <script src="src/script.js"></script>
 </body>

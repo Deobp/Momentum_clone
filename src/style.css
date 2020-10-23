@@ -1,21 +1,25 @@
-body {
-    background-image: url("https://source.unsplash.com/yJsuEsVXbsE/5472x3648");
-    background-repeat: no-repeat;
-    font-weight: bold;
-    margin: 20% 25% 25% 25%;
-    text-align: center;
-    margin: 0 auto;
-    font-family: sans-serif;
-}
-
-#time {
-    padding: 1px;
-    font-size: 70px;
-}
-
-#greeting {
-    padding: 10 20;
-    font-size: 150px;
-}
-
-#goal {}
+    body {
+        background-image: url("https://source.unsplash.com/random");
+        background-size: cover;
+        font-weight: bold;
+        text-align: center;
+        margin: 0 auto;
+        font-family: sans-serif;
+        color: white;
+    }
+    
+    #time {
+        font-size: 1500%;
+        margin-top: 10%;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+    
+    #greeting {
+        font-size: 150px;
+        margin-top: 5%;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
