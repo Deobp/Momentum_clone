@@ -9,16 +9,28 @@
 </head>
 
 <body>
+    <form id='qq'>
+        <label for='localStorage'>Add data to localStorage</label>
+        <input type="text" id='text' name="data">
+        <button id='button'>Submit</button>
+    </form>
     <div>
         <p id="time"></p>
         <p id='greeting'>Hello, <span id="name" contentEditable="true">name</span>.</p>
     </div>
-    <div>
-        <p id='goal'>What is your main goal for today?</p>
-        <input type="checkbox" name="task" unchecked>
-        <label contentEditable="true" id="task" contentEditable="true">Enter your task</label>
+    <div id='checkbox' hidden>
+        <input type="checkbox" id='taskCheckbox' name="task " unchecked>
+        <label contentEditable="true " for='taskCheckbox' id="task " contentEditable="true ">Enter your task</label>
     </div>
-    <script src="src/script.js"></script>
+
+    <div id="goal">
+        <p>What is your main focus for today?</p>
+        <form id="formz">
+            <label for='goals'>type</label>
+            <input type="text" id='text' name="myGoals">
+        </form>
+    </div>
+    <script src="src/script.js "></script>
 </body>
 
 </html>
