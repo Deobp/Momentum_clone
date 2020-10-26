@@ -1,5 +1,5 @@
     body {
-        background-image: url("https://source.unsplash.com/random");
+        background-image: url("https://source.unsplash.com/weekly?lake");
         background-size: cover;
         font-weight: bold;
         text-align: center;
@@ -9,15 +9,23 @@
     }
     
     #time {
-        font-size: 1500%;
-        margin-top: 10%;
+        font-size: 1000%;
+        margin-top: 20%;
         margin-right: 0px;
         margin-bottom: 0px;
         margin-left: 0px;
     }
     
     #greeting {
-        font-size: 150px;
+        font-size: 400%;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+    
+    #goal {
+        font-size: 200%;
         margin-top: 5%;
         margin-right: 0px;
         margin-bottom: 0px;
