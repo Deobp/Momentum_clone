@@ -1,44 +1,41 @@
 let time = document.getElementById("time");
 let name = document.getElementById("name");
 let task = document.getElementById("task");
+let divCheckbox = document.getElementById("checkbox");
+let form = document.getElementById("form");
+let text = document.getElementById("text");
+let divGoal = document.getElementById("goal");
+let resetGoal = document.getElementById("close");
 let timerId = setInterval(addTime, 60000);
-let checkbox = document.getElementById("checkbox");
 
 addTime()
 localStorageUploader()
-document.getElementById('text').addEventListener("submit", test);
 
-formz.addEventListener("submit", test);
-// () {
-//     if (e.key == "Enter") {
-//         localStorage.setItem("task", input.value);
-//         task.innerText = input.value;
-//         checkbox.removeAttribute("hidden");
-//         input.setAttribute("hidden", "true");
-//     }
-function test(event) {
-    alert('1')
-    event.preventDefault();
-}
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    divCheckbox.removeAttribute("hidden");
+    divGoal.setAttribute("hidden", "true");
+    task.innerText = text.value;
+    text.value = "";
+    localStorage.setItem("task", task.innerText);
+
+});
+
+resetGoal.addEventListener("click", () => {
+    divGoal
+    divGoal.removeAttribute("hidden");
+    divCheckbox.setAttribute("hidden", "true");
+    localStorage.removeItem("task");
+});
 
 name.addEventListener("dblclick", () => name.setAttribute("contentEditable", "true"));
+
 name.addEventListener("keypress", (e) => {
     if (e.key == "Enter") {
         localStorage.setItem("name", name.innerText);
         name.setAttribute("contentEditable", "false");
-
     }
 });
-
-// task.addEventListener("click", () => task.setAttribute("contentEditable", "true"));
-
-// task.addEventListener("keypress", (e) => {
-//     if (e.key == "Enter") {
-//         localStorage.setItem("task", task.innerText);
-//         task.setAttribute("contentEditable", "false")
-//     }
-// });
-
 
 function addTime() {
     let clock = "";
@@ -56,6 +53,12 @@ function addTime() {
 }
 
 function localStorageUploader() {
-    if (localStorage.getItem("name")) name.innerText = localStorage.getItem("name");
-    if (localStorage.getItem("task")) task.innerText = localStorage.getItem("task");
+    if (localStorage.getItem("name")) {
+        name.innerText = localStorage.getItem("name");
+    }
+    if (localStorage.getItem("task")) {
+        task.innerText = localStorage.getItem("task");
+        divCheckbox.removeAttribute("hidden");
+        divGoal.setAttribute("hidden", "true");
+    }
 }

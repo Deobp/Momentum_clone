@@ -9,23 +9,20 @@
 </head>
 
 <body>
-    <form id='qq'>
-        <label for='localStorage'>Add data to localStorage</label>
-        <input type="text" id='text' name="data">
-        <button id='button'>Submit</button>
-    </form>
     <div>
         <p id="time"></p>
         <p id='greeting'>Hello, <span id="name" contentEditable="true">name</span>.</p>
     </div>
+
     <div id='checkbox' hidden>
-        <input type="checkbox" id='taskCheckbox' name="task " unchecked>
-        <label contentEditable="true " for='taskCheckbox' id="task " contentEditable="true ">Enter your task</label>
+        <input type="checkbox" id='taskCheckbox' name="task" unchecked>
+        <label for="taskCheckbox" id="task"></label>
+        <button for="taskCheckbox" id="close" name="close">X</button>
     </div>
 
     <div id="goal">
         <p>What is your main focus for today?</p>
-        <form id="formz">
+        <form id="form">
             <label for='goals'>type</label>
             <input type="text" id='text' name="myGoals">
         </form>
