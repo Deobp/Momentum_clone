@@ -5,11 +5,16 @@ let divCheckbox = document.getElementById("checkbox");
 let form = document.getElementById("form");
 let text = document.getElementById("text");
 let divGoal = document.getElementById("goal");
-let resetGoal = document.getElementById("close");
-let timerId = setInterval(addTime, 60000);
+let check = document.getElementById("check");
+let closeGoal = document.getElementById("closeGoal");
 
-addTime()
-localStorageUploader()
+// task.addEventListener("click"), (e) => {
+//     task.sheet.insertRule('#task {text-decoration: line-through}');
+//      task.style.text-decoration = "line-through";
+// }
+
+task.addEventListener("click", checkCondition)
+
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -21,7 +26,7 @@ form.addEventListener("submit", (e) => {
 
 });
 
-resetGoal.addEventListener("click", () => {
+closeGoal.addEventListener("click", () => {
     divGoal
     divGoal.removeAttribute("hidden");
     divCheckbox.setAttribute("hidden", "true");
@@ -37,7 +42,20 @@ name.addEventListener("keypress", (e) => {
     }
 });
 
-function addTime() {
+function checkCondition() {
+    if (check.className == "fa fa-square-o") {
+        check.className = "fa fa-check-square-o";
+        task.setAttribute = ("style", "text-decoration:line-through");
+        localStorage.setItem("check", true);
+    } else {
+        check.className = "fa fa-square-o";
+        task.setAttribute = ("style", "text-decoration:unlined");
+        localStorage.removeItem("check");
+    }
+}
+
+setInterval(function() {
+    //rewrite function into 2 functions
     let clock = "";
     if (/^\d\d$/.test(String(new Date().getHours()))) {
         clock = clock.concat(String(new Date().getHours())).concat(":");
@@ -50,9 +68,10 @@ function addTime() {
         clock = clock.concat("0").concat(String(new Date().getMinutes()));
     }
     time.innerText = clock;
-}
+}(), 60000);
+//let timerId = setInterval(runTime, 60000);
 
-function localStorageUploader() {
+(function localStorageUploader() {
     if (localStorage.getItem("name")) {
         name.innerText = localStorage.getItem("name");
     }
@@ -61,4 +80,7 @@ function localStorageUploader() {
         divCheckbox.removeAttribute("hidden");
         divGoal.setAttribute("hidden", "true");
     }
-}
+    if (localStorage.getItem("check")) {
+        check.className = "fa fa-check-square-o";
+    }
+})();

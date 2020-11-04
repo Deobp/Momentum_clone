@@ -6,26 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="src/style.css" type="text/css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/8e10072a5b.js"></script>
+
+
 </head>
 
 <body>
-    <div>
+    <div id="meetingText">
         <p id="time"></p>
-        <p id='greeting'>Hello, <span id="name" contentEditable="true">name</span>.</p>
+        <p id='greeting'>Hello, <span id="name" contentEditable="true" spellcheck="false">name</span>.</p>
+
     </div>
 
     <div id='checkbox' hidden>
+
         <p>Today</p>
-        <input type="checkbox" id='taskCheckbox' name="task" unchecked>
-        <label for="taskCheckbox" id="task"></label>
-        <button for="taskCheckbox" id="close" name="close">X</button>
+        <i class="fa fa-square-o" aria-hidden="true" id="check" id="check"></i>
+        <p id="task"></p>
+        <i class="fa fa-times-circle" aria-hidden="true" id="closeGoal" id="closeButton"> </i>
+
     </div>
 
     <div id="goal">
         <p>What is your main focus for today?</p>
         <form id="form">
-            <label for='goals'>type</label>
-            <input type="text" id='text' name="myGoals">
+            <label for='goals'></label>
+            <!--change border for input: top left right, bottom don't touch-->
+            <input type="text" id="text" name="myGoals">
         </form>
     </div>
     <script src="src/script.js "></script>

@@ -39,3 +39,21 @@
         margin-bottom: 0px;
         margin-left: 0px;
     }
+    
+    #form {
+        margin-top: 0px;
+    }
+    
+    #meetingText {}
+    
+    #task {
+        display: inline-block;
+    }
+    
+    #check {
+        display: inline-block;
+    }
+    
+    #closeButton {
+        display: inline-block;
+    }
