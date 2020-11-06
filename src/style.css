@@ -24,14 +24,7 @@
         margin-left: 0px;
     }
     
-    #goal {
-        font-size: 200%;
-        margin-top: 5%;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
-    }
-    
+    #goal,
     #checkbox {
         font-size: 200%;
         margin-top: 5%;
@@ -39,21 +32,26 @@
         margin-bottom: 0px;
         margin-left: 0px;
     }
+    /* #checkbox {
+        font-size: 200%;
+        margin-top: 5%;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    } */
     
-    #form {
+    #inputGoal {
         margin-top: 0px;
     }
     
     #meetingText {}
-    
-    #task {
+    /* #task {
         display: inline-block;
-    }
-    
-    #check {
+    } */
+    /* #check {
         display: inline-block;
     }
     
     #closeButton {
         display: inline-block;
-    }
+    } */
