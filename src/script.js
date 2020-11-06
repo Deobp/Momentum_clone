@@ -79,15 +79,25 @@ function dateHours() {
 function dateMinutes() {
     let minutes = new Date().getMinutes();
     if (/^\d\d$/.test(String(minutes))) {
-        return concat(minutes);
+        return minutes;
     } else {
         return ("0").concat(String(minutes));
     }
 }
 
-setInterval((function clock() {
+// setInterval((function clock() {
+//     time.innerText = `${dateHours()}${dateMinutes()}`;
+// }), 6000)();
+
+
+// CHECK THIS ONE!!!
+// setTimeout(function() {
+//     time.innerText = `${dateHours()}${dateMinutes()}`;
+// }, 6000)(); // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+setTimeout(function() {
     time.innerText = `${dateHours()}${dateMinutes()}`;
-}), 6000)();
+}(), 6000);
 
 (function localStorageUploader() {
 
