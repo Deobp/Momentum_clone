@@ -1,1 +1,2 @@
-# Momentum_clone
+# Trying to clone main functionality from momentum. 
+Previev coming soon.
