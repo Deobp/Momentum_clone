@@ -2,8 +2,8 @@ let time = document.getElementById("time");
 let name = document.getElementById("name");
 let task = document.getElementById("task");
 let divCheckbox = document.getElementById("checkbox");
-let inputGoal = document.getElementById("inputGoal");
-let InputText = document.getElementById("InputText");
+let goalForm = document.getElementById("goalForm");
+let goalInputForm = document.getElementById("goalInputForm");
 let divGoal = document.getElementById("goal");
 let check = document.getElementById("check");
 let closeGoal = document.getElementById("closeGoal");
@@ -12,12 +12,12 @@ task.addEventListener("click", checkCondition);
 check.addEventListener("click", checkCondition);
 name.addEventListener("dblclick", () => name.setAttribute("contentEditable", "true"));
 
-inputGoal.addEventListener("submit", (e) => {
+goalForm.addEventListener("submit", (e) => {
     e.preventDefault();
     divCheckbox.removeAttribute("hidden");
     divGoal.setAttribute("hidden", "true");
-    task.innerText = InputText.value;
-    InputText.value = "";
+    task.innerText = goalInputForm.value;
+    goalInputForm.value = "";
     localStorage.setItem("task", task.innerText);
 
 });
@@ -48,25 +48,6 @@ function checkCondition() {
     }
 }
 
-// setInterval(function() {
-//     let hours = new Date().getHours();
-//     let minutes = new Date().getMinutes();
-//     //rewrite function into 2 functions
-//     let clock = "";
-//     if (/^\d\d$/.test(String(hours))) {
-//         clock = clock.concat(String(hours)).concat(":");
-//     } else {
-//         clock = clock.concat("0").concat(String(hours)).concat(":");
-//     }
-//     if (/^\d\d$/.test(String(minutes))) {
-//         clock = clock.concat(minutes);
-//     } else {
-//         clock = clock.concat("0").concat(String(minutes));
-//     }
-//     time.innerText = clock;
-//     alert('1')
-// }(), 60);
-
 function dateHours() {
     let hours = new Date().getHours();
     if (/^\d\d$/.test(String(hours))) {
@@ -85,22 +66,7 @@ function dateMinutes() {
     }
 }
 
-// setInterval((function clock() {
-//     time.innerText = `${dateHours()}${dateMinutes()}`;
-// }), 6000)();
-
-
-// CHECK THIS ONE!!!
-// setTimeout(function() {
-//     time.innerText = `${dateHours()}${dateMinutes()}`;
-// }, 6000)(); // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-setTimeout(function() {
-    time.innerText = `${dateHours()}${dateMinutes()}`;
-}(), 6000);
-
 (function localStorageUploader() {
-
     if (localStorage.getItem("name")) {
         name.innerText = localStorage.getItem("name");
     }
@@ -114,3 +80,13 @@ setTimeout(function() {
         task.style.textDecoration = "line-through";
     }
 })();
+
+clock()
+let timerId = setInterval(clock, 60000)
+
+function clock() {
+    time.innerText = `${dateHours()}${dateMinutes()}`;
+}
+setTimeout(function() {
+    time.innerText = `${dateHours()}${dateMinutes()}`;
+}(), 6000);

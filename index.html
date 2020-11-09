@@ -10,26 +10,23 @@
 </head>
 
 <body>
-    <div id="meetingText">
+    <div id="infoBox">
         <p id="time"></p>
         <p id='greeting'>Hello, <span id="name" contentEditable="true" spellcheck="false">name</span>.</p>
-
     </div>
 
     <div id='checkbox' hidden>
-
         <p>Today</p>
         <i class="fa fa-square-o" aria-hidden="true" id="check" id="check"></i>
         <span id="task"></span>
         <i class="fa fa-times-circle" aria-hidden="true" id="closeGoal" id="closeButton"> </i>
-
     </div>
 
     <div id="goal">
         <p>What is your main focus for today?</p>
-        <form id="inputGoal">
+        <form id="goalForm">
             <label for='goals'></label>
-            <input type="text" id="InputText" name="myGoals">
+            <input type="text" id="goalInputForm" name="myGoals">
         </form>
     </div>
     <script src="src/script.js "></script>

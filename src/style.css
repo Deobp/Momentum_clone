@@ -1,57 +1,77 @@
-    body {
-        background-image: url("https://source.unsplash.com/weekly?lake");
-        background-size: cover;
-        font-weight: bold;
-        text-align: center;
-        margin: 0 auto;
-        font-family: sans-serif;
-        color: white;
-    }
-    
-    #time {
-        font-size: 1000%;
-        margin-top: 20%;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
-    }
-    
-    #greeting {
-        font-size: 400%;
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
-    }
-    
-    #goal,
-    #checkbox {
-        font-size: 200%;
-        margin-top: 5%;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
-    }
-    /* #checkbox {
-        font-size: 200%;
-        margin-top: 5%;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
-    } */
-    
-    #inputGoal {
-        margin-top: 0px;
-    }
-    
-    #meetingText {}
-    /* #task {
-        display: inline-block;
-    } */
-    /* #check {
-        display: inline-block;
-    }
-    
-    #closeButton {
-        display: inline-block;
-    } */
+   /**check background on mdn */
+   
+   *:focus {
+       outline: none;
+   }
+   
+   html {
+       height: 100%;
+   }
+   
+   body {
+       background-image: url("https://source.unsplash.com/weekly?dark");
+       background-repeat: no-repeat;
+       background-size: cover;
+       font-weight: bold;
+       text-align: center;
+       margin: 0 auto;
+       font-family: sans-serif;
+       color: white;
+   }
+   
+   #time {
+       font-size: 1000%;
+       /* rewrite margin with margin and 4 values*/
+       margin-top: 20%;
+       margin-right: 0px;
+       margin-bottom: 0px;
+       margin-left: 0px;
+   }
+   
+   #greeting {
+       font-size: 400%;
+       margin-top: 0px;
+       margin-right: 0px;
+       margin-bottom: 0px;
+       margin-left: 0px;
+   }
+   
+   #goal,
+   #checkbox {
+       font-size: 200%;
+       margin-top: 5%;
+       margin-right: 0px;
+       margin-bottom: 0px;
+       margin-left: 0px;
+   }
+   
+   #goal {
+       max-width: 540px;
+       width: 100%;
+       margin: 0 auto;
+   }
+   
+   #inputGoal {
+       margin-top: 0px;
+   }
+   
+   #goalInputForm {
+       background: transparent 100%;
+       /*       border-top: 0px;
+       border-left: 0px;
+       border-right: 0px;
+       */
+       border: 0;
+       border-bottom: 1px solid white;
+       color: white;
+       width: 100%;
+       height: 50px;
+       padding: 0;
+       font-size: 40px;
+       font-weight: bold;
+       text-align: center;
+   }
+   
+   #goalInputForm:focus {
+       outline: none;
+   }
